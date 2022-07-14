@@ -1,0 +1,170 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+}
+
+*::before, *::after {
+   box-sizing: border-box;
+}
+
+html, body {
+   font-size: 16px;
+   height: 100%;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -webkit-text-size-adjust: 100%;
+   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+   font-family: system-ui, sans-serif;
+   background: #4285f4;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+img {
+   max-width: 100%;
+   object-fit: cover;
+   object-position: center center;
+   aspect-ratio: auto 50 / 50;
+}
+
+ul, ol {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+input {
+   border: none;
+   outline: none;
+}
+
+button {
+   border: none;
+   outline: none;
+   background: none;
+   cursor: pointer;
+}
+
+.widget {
+   max-width: 400px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.select {
+   height: 3rem;
+   padding-left: 1.25rem;
+   padding-right: 1.25rem;
+   border-radius: .5rem;
+   background: #fff;
+   font-size: 18px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.select i {
+   font-size: 28px;
+   transition: transform 0.2s linear;
+}
+
+.widget.active .select i {
+   transform: rotate(-180deg);
+}
+
+.content {
+   display: none;
+   background: #fff;
+   margin-top: .75rem;
+   padding: 1.25rem;
+   border-radius: .5rem;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.widget.active .content {
+   display: block;
+}
+
+.search {
+   position: relative;
+}
+
+.search i {
+   position: absolute;
+   top: 50%;
+   left: 1rem;
+   pointer-events: none;
+   transform: translateY(-50%);
+   color: #999;
+   font-size: 1.25rem;
+}
+
+.search input {
+   height: 3rem;
+   width: 100%;
+   font-size: 1rem;
+   border-radius: .25rem;
+   padding-left: 2.75rem;
+   padding-right: 1.25rem;
+   border: 1px solid #b3b3b3;
+}
+
+.search input:focus {
+   padding-left: 2.5rem;
+   border: 2px solid #4285f4;
+}
+
+.search input::placeholder {
+   color: #bfbfbf;
+}
+
+.options {
+   margin-top: .625rem;
+   max-height: 250px;
+   overflow-y: auto;
+   padding-right: .5rem;
+}
+
+.options::-webkit-scrollbar {
+   width: .5rem;
+}
+
+.options::-webkit-scrollbar-track {
+   background: #f1f1f1;
+   border-radius: 1.5rem;
+}
+
+.options::-webkit-scrollbar-thumb {
+   background: #ccc;
+   border-radius: 1.5rem;
+}
+
+.options::-webkit-scrollbar-thumb:hover {
+   background: #b3b3b3;
+}
+
+.content li {
+   height: 3rem;
+   border-radius: .25rem;
+   padding-left: .75rem;
+   padding-right: .75rem;
+   font-size: 1.25rem;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+
+.content li:hover, li.selected {
+   background: #f2f2f2;
+}
+
